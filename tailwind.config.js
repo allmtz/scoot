@@ -28,6 +28,9 @@ module.exports = {
         "lexend-deca": ["Lexend Deca", ...defaultTheme.fontFamily.sans],
 
       },
+      backgroundImage:{
+        "hero-mobile":"url(/assets/images/home-hero-mobile.jpg)"
+      }
     },
   },
   plugins: [],
