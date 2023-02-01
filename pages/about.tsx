@@ -9,6 +9,7 @@ import { Nav } from "@/components/Nav";
 import { ImageBlock } from "@/components/ImageBlock";
 import { NumberedImage } from "@/components/NumberedImage";
 import { FAQCard } from "@/components/FAQCard";
+import { Footer } from "@/components/Footer";
 
 // for <ImageBlock>
 import digitalEra from "../public/assets/images/digital-era.jpg";
@@ -19,9 +20,9 @@ import ourTech from "../public/assets/images/our-tech.jpg";
 import ourIntegrity from "../public/assets/images/our-integrity.jpg";
 import ourCommunity from "../public/assets/images/our-community.jpg";
 
+// arrows
 import rightArrow from "../public/assets/patterns/right-arrow.svg";
 import leftDownward from "../public/assets/patterns/left-downward-arrow.svg";
-import { Footer } from "@/components/Footer";
 
 export default function About() {
   return (

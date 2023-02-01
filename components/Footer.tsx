@@ -14,7 +14,7 @@ import semiCircles from "../public/assets/patterns/semi-circles.svg";
 
 export const Footer = () => {
   return (
-    <footer className="flex flex-col items-center font-space-mono">
+    <footer className="flex flex-col items-center font-space-mono mt-20">
       <div className="bg-dark-navy text-center text-2xl px-2 pt-12">
         <h2 className="text-white">Sign up and Scoot off today</h2>
         <div className="flex justify-center mt-5 gap-4">
