@@ -1,6 +1,7 @@
 import { StoreButton } from "./StoreButton";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import appleStore from "../public/assets/icons/app-store.svg";
 import googlePlay from "../public/assets/icons/google-play.svg";
@@ -25,9 +26,15 @@ export const Footer = () => {
       <div className="flex flex-col items-center gap-8 w-full text-white bg-slate-800">
         <p className="text-2xl mt-4 ">scoot</p>
         <ul className="text-center leading-10">
-          <li>About</li>
-          <li>Location</li>
-          <li>Careers</li>
+          <li>
+            <Link href="/about">About </Link>
+          </li>
+          <li>
+            <Link href="/location">Location </Link>
+          </li>
+          <li>
+            <Link href="/careers">Careers </Link>
+          </li>
         </ul>
         <div className="flex gap-4 text-white pb-8">
           <Image src={fbLogo} alt="Facebook" />

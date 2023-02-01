@@ -60,7 +60,11 @@ export default function Home() {
                 away!
               </p>
               <Button text="Get Scootin" />
-              <Image src={rightArrow} alt="" className="-translate-x-56" />
+              <Image
+                src={rightArrow}
+                alt=""
+                className="-translate-x-56 -mt-12"
+              />
             </div>
           </div>
 
