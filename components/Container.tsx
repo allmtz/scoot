@@ -1,3 +1,3 @@
 export const Container = ({ ...props }) => {
-  return <div>{props.children}</div>;
+  return <div className="font-space-mono">{props.children}</div>;
 };

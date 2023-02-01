@@ -17,7 +17,7 @@ export const ImageBlock = ({
   arrowDirection,
 }: IImageBlock) => {
   return (
-    <div className="relative border flex flex-col gap-4 items-center p-4 mt-3">
+    <div className="relative flex flex-col gap-4 items-center p-4 mt-3">
       <div className="relative">
         <Image src={imgSrc} alt={""} className="rounded-full" />
       </div>
