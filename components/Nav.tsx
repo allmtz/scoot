@@ -10,27 +10,35 @@ import close from "../public/assets/icons/close.svg";
 export const Nav = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   return (
-    <nav className="font-space-mono items-center flex p-3 bg-white">
-      {menuIsOpen ? (
-        <Image
-          src={close}
-          alt={"close navigation menu"}
-          onClick={() => setMenuIsOpen(false)}
-        />
-      ) : (
-        <Image
-          src={hamburger}
-          alt={"open navigation menu"}
-          onClick={() => setMenuIsOpen(true)}
-        />
-      )}
+    <>
+      <nav className="font-space-mono items-center flex p-3 bg-white">
+        {menuIsOpen ? (
+          <Image
+            src={close}
+            alt={"close navigation menu"}
+            onClick={() => setMenuIsOpen(false)}
+          />
+        ) : (
+          <Image
+            src={hamburger}
+            alt={"open navigation menu"}
+            onClick={() => setMenuIsOpen(true)}
+          />
+        )}
 
-      <h2 className="font-bold text-3xl leading-none m-auto text-dark-navy ">
-        scoot
-      </h2>
+        <Link href={"/"} className="m-auto">
+          <h2 className="font-bold text-3xl leading-none text-dark-navy ">
+            scoot
+          </h2>
+        </Link>
+      </nav>
 
-      {/* <div>
-        <ul role="list" className="flex gap-5 text-dim-grey">
+      {/* WIP sliding mobile nav  */}
+      {/* <div className="bg-clear-gray z-20 h-full w-full absolute">
+        <ul
+          role="list"
+          className="flex flex-col gap-5 bg-slate-700 absolute left-0 z-20 h-full"
+        >
           <li>
             <Link href={"/about"}>About</Link>
           </li>
@@ -42,6 +50,6 @@ export const Nav = () => {
           </li>
         </ul>
       </div> */}
-    </nav>
+    </>
   );
 };

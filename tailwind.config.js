@@ -22,6 +22,7 @@ module.exports = {
         "light-grey":"#efecf4",
         "snow":"#f2f5f9",
         "light-ylw":"#fff4df",
+        "clear-gray": "#222020c4"
       },
       fontFamily: {
         "space-mono": ["Space Mono", ...defaultTheme.fontFamily.sans],
