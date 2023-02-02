@@ -27,7 +27,7 @@ export const Footer = () => {
       </div>
       <div className="flex flex-col items-center gap-8 w-full text-white bg-slate-800 md:flex-row md:justify-around md:py-4">
         <p className="text-2xl mt-4 md:mt-0">scoot</p>
-        <ul className="text-center leading-10 md:flex md:gap-8">
+        <ul className="text-center leading-10 md:flex md:gap-8 text-dim-grey">
           <li>
             <Link href="/about">About </Link>
           </li>

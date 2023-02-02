@@ -20,7 +20,7 @@ export const NumberedImage = ({
         <p className="text-dark-navy">{imgNumber}</p>
       </div>
       <p className="text-dark-navy text-2xl mt-4">{title}</p>
-      <p className="text-center text-dim-grey mt-8">{description}</p>
+      <p className="text-center text-dim-grey mt-8 max-w-xl">{description}</p>
     </div>
   );
 };

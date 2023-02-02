@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import bgImage from "../public/assets/images/about-hero-mobile.jpg";
+import bgMobile from "../public/assets/images/about-hero-mobile.jpg";
+import bgTablet from "../public/assets/images/about-hero-tablet.jpg";
+import bgDesktop from "../public/assets/images/about-hero-desktop.jpg";
 
 // components
 import { Container } from "@/components/Container";
@@ -24,14 +26,26 @@ import ourCommunity from "../public/assets/images/our-community.jpg";
 import rightArrow from "../public/assets/patterns/right-arrow.svg";
 import leftDownward from "../public/assets/patterns/left-downward-arrow.svg";
 
+// patterns
+import whiteCircles from "../public/assets/patterns/white-circles.svg";
+
 export default function About() {
   return (
     <>
       <Container>
         <Nav />
-        <div className="relative flex items-center justify-center ">
-          <Image src={bgImage} alt="" />
-          <h1 className="absolute text-white text-3xl">About</h1>
+        <div className="relative flex items-center justify-center overflow-hidden">
+          <Image src={bgMobile} alt="" className="md:hidden" />
+          <Image src={bgTablet} alt="" className="hidden md:inline-block" />
+          <Image src={bgDesktop} alt="" className="hidden" />
+          <h1 className="absolute text-white text-3xl md:text-5xl md:left-20">
+            About
+          </h1>
+          <Image
+            src={whiteCircles}
+            alt=""
+            className="hidden md:inline absolute -right-8"
+          />
         </div>
 
         <ImageBlock
@@ -79,8 +93,9 @@ export default function About() {
           ></NumberedImage>
         </section>
 
-        <section className="flex flex-col gap-4 p-2">
-          <h2 className="mx-auto mt-20">FAQs</h2>
+        <section className="flex flex-col gap-4 p-2  text-dark-navy">
+          <h2 className="mx-auto mt-20 text-3xl md:text-5xl ">FAQs</h2>
+          <h2 className="mx-auto mt-5 text-2xl">How it works</h2>
           <FAQCard
             question="How do I download the app?"
             answer="To download the Scoot app, you can search “Scoot” in both the App and Google Play stores. 
@@ -102,7 +117,7 @@ export default function About() {
         </section>
 
         <section className="flex flex-col gap-4 p-2">
-          <h2 className="mx-auto mt-20">Safe Driving</h2>
+          <h2 className="mx-auto mt-20 text-2xl">Safe Driving</h2>
           <FAQCard
             question="Should I wear a helmet?"
             answer="Yes, please do! All cities have different laws. But we strongly strongly strongly recommend 
