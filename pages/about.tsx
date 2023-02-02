@@ -28,13 +28,21 @@ import leftDownward from "../public/assets/patterns/left-downward-arrow.svg";
 
 // patterns
 import whiteCircles from "../public/assets/patterns/white-circles.svg";
+import { PageTitleHero } from "@/components/PageTitleHero";
 
 export default function About() {
   return (
     <>
       <Container>
         <Nav />
-        <div className="relative flex items-center justify-center overflow-hidden">
+
+        <PageTitleHero
+          pageName="About"
+          mobileSrc={bgMobile}
+          tabletSrc={bgTablet}
+          desktopSrc={bgDesktop}
+        />
+        {/* <div className="relative flex items-center justify-center overflow-hidden">
           <Image src={bgMobile} alt="" className="md:hidden" />
           <Image src={bgTablet} alt="" className="hidden md:inline-block" />
           <Image src={bgDesktop} alt="" className="hidden" />
@@ -46,7 +54,7 @@ export default function About() {
             alt=""
             className="hidden md:inline absolute -right-8"
           />
-        </div>
+        </div> */}
 
         <ImageBlock
           imgSrc={digitalEra}

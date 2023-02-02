@@ -27,7 +27,7 @@ export const ImageBlock = ({
         </>
       )}
 
-      <h3 className="font-space-mono text-2xl text-center text-dark-navy">
+      <h3 className="font-space-mono text-2xl text-center text-dark-navy md:text-4xl">
         {title}
       </h3>
       <p className="text-dim-grey text-center max-w-xl">{description}</p>

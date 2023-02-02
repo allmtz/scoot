@@ -7,7 +7,9 @@ import { ImageBlock } from "@/components/ImageBlock";
 import { NumberedImage } from "@/components/NumberedImage";
 
 // images
-import bgImage from "../public/assets/images/careers-location-hero-mobile.jpg";
+import bgMobile from "../public/assets/images/careers-location-hero-mobile.jpg";
+import bgTablet from "../public/assets/images/careers-location-hero-tablet.jpg";
+import bgDesktop from "../public/assets/images/careers-location-hero-desktop.jpg";
 
 // for <ImageBlock>
 import joinUs from "../public/assets/images/join-us.jpg";
@@ -21,15 +23,28 @@ import ourCommunity from "../public/assets/images/our-community.jpg";
 import leftDownward from "../public/assets/patterns/left-downward-arrow.svg";
 import { PositionsCard } from "@/components/PositionsCard";
 import { Footer } from "@/components/Footer";
+import { PageTitleHero } from "@/components/PageTitleHero";
 
 export default function Careers() {
   return (
     <Container>
       <Nav />
-      <div className="relative flex items-center justify-center ">
-        <Image src={bgImage} alt="" />
+
+      <PageTitleHero
+        pageName="Careers"
+        mobileSrc={bgMobile}
+        tabletSrc={bgTablet}
+        desktopSrc={bgDesktop}
+      />
+
+      {/* <div className="relative flex items-center justify-center ">
+        <Image src={bgMobile} alt="" className="md:hidden" />
+
+        <Image src={bgMobile} alt="" className="md:hidden" />
+        <Image src={bgTablet} alt="" className="hidden md:inline-block" />
+        <Image src={bgDesktop} alt="" className="hidden" />
         <h1 className="absolute text-white text-3xl">Careers</h1>
-      </div>
+      </div> */}
 
       <section>
         <ImageBlock
@@ -44,7 +59,9 @@ export default function Careers() {
       </section>
 
       <section className="flex flex-col items-center gap-20">
-        <h2 className="text-dark-navy text-3xl mt-20">Why join us?</h2>
+        <h2 className="text-dark-navy text-3xl mt-20 md:text-4xl">
+          Why join us?
+        </h2>
         <NumberedImage
           imgSrc={ourTech}
           imgNumber="01"
