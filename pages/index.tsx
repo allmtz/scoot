@@ -11,10 +11,14 @@ import { ImageBlock } from "@/components/ImageBlock";
 //images
 // using nex/image with local images : https://nextjs.org/docs/basic-features/image-optimization#local-images
 import mobileHero from "../public/assets/images/home-hero-mobile.jpg";
+import tabletHero from "../public/assets/images/home-hero-tablet.jpg";
+import desktopHero from "../public/assets/images/home-hero-desktop.jpg";
+
 import { toUnicode } from "punycode";
 import rightArrow from "../public/assets/patterns/right-arrow.svg";
 import leftDownward from "../public/assets/patterns/left-downward-arrow.svg";
 import leftUpward from "../public/assets/patterns/left-upward-arrow.svg";
+import whiteCircles from "../public/assets/patterns/white-circles.svg";
 
 // home <infoBlock> images
 import locate from "../public/assets/icons/locate.svg";
@@ -47,13 +51,20 @@ export default function Home() {
         <main className="bg-white flex flex-col items-center">
           {/* <img src={"/assets/images/home-hero-mobile.jpg"} alt="" /> */}
 
-          <div className="relative max-w-fit">
-            <Image src={mobileHero} alt="scooting on the beach" />
+          <div className="relative max-w-fit overflow-hidden">
+            <Image src={mobileHero} alt="" className="md:hidden" />
+            <Image
+              src={tabletHero}
+              alt=""
+              className="hidden lg:hidden md:inline"
+            />
+            <Image src={desktopHero} alt="" className="hidden lg:inline" />
+
             <div className="absolute top-0 w-full h-full flex flex-col gap-8 items-center justify-center text-white">
               <h1 className="font-space-mono text-4xl text-center">
-                Scooter <br /> sharing made <br /> simple{" "}
+                Scooter <br /> sharing made <br /> simple
               </h1>
-              <p className="w-[260px] text-center">
+              <p className="w-[260px] text-center md:text-lg md:w-[700px]">
                 Scoot takes the hassle out of urban mobility. Our bikes are
                 placed in convenient locations in each of our cities. Use our
                 app to locate the nearest bike, unlock it with a tap, and you’re
@@ -63,12 +74,17 @@ export default function Home() {
               <Image
                 src={rightArrow}
                 alt=""
-                className="-translate-x-56 -mt-12"
+                className="-translate-x-56 -mt-12 md:translate-x-100"
+              />
+              <Image
+                src={whiteCircles}
+                alt=""
+                className="hidden md:inline absolute bottom-24 -right-8"
               />
             </div>
           </div>
 
-          <section>
+          <section className="mt-5">
             <InfoBlock
               imgSrc={locate}
               title="Locate with app"

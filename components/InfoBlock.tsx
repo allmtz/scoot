@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import line from "../public/assets/patterns/line.svg";
+
 interface IInfoBlock {
   imgSrc: string;
   title: string;
@@ -9,10 +11,20 @@ interface IInfoBlock {
 
 export const InfoBlock = ({ imgSrc, title, description, alt }: IInfoBlock) => {
   return (
-    <div className="flex flex-col gap-4 items-center p-4 mt-3">
-      <Image src={imgSrc} alt={""} />
-      <h3 className="font-space-mono text-2xl text-dark-navy">{title}</h3>
-      <p className="text-dim-grey text-center">{description}</p>
+    <div className="flex flex-col gap-4 items-center p-4 mt-3 md:flex-row md:gap-20 relative">
+      <Image src={imgSrc} alt={""} className="z-10" />
+      <Image
+        src={line}
+        alt={""}
+        className="hidden md:inline absolute -left-10 rotate-90"
+      />
+
+      <div className="FOR-TABLET flex flex-col items-center justify gap-4 md:items-start">
+        <h3 className="font-space-mono text-2xl text-dark-navy">{title}</h3>
+        <p className="text-dim-grey text-center md:text-start md:w-[400px]">
+          {description}
+        </p>
+      </div>
     </div>
   );
 };

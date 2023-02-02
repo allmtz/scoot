@@ -30,7 +30,7 @@ export const ImageBlock = ({
       <h3 className="font-space-mono text-2xl text-center text-dark-navy">
         {title}
       </h3>
-      <p className="text-dim-grey text-center">{description}</p>
+      <p className="text-dim-grey text-center max-w-xl">{description}</p>
       <Button text="Learn More" />
     </div>
   );
