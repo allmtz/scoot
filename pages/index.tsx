@@ -1,3 +1,6 @@
+// todo
+// import lighter space mono font
+
 import Head from "next/head";
 import Image from "next/image";
 
@@ -7,6 +10,7 @@ import { Container } from "@/components/Container";
 import { Nav } from "@/components/Nav";
 import { InfoBlock } from "@/components/InfoBlock";
 import { ImageBlock } from "@/components/ImageBlock";
+import { Footer } from "@/components/Footer";
 
 //images
 // using nex/image with local images : https://nextjs.org/docs/basic-features/image-optimization#local-images
@@ -14,27 +18,21 @@ import mobileHero from "../public/assets/images/home-hero-mobile.jpg";
 import tabletHero from "../public/assets/images/home-hero-tablet.jpg";
 import desktopHero from "../public/assets/images/home-hero-desktop.jpg";
 
-import { toUnicode } from "punycode";
+//patterns
 import rightArrow from "../public/assets/patterns/right-arrow.svg";
 import leftDownward from "../public/assets/patterns/left-downward-arrow.svg";
-import leftUpward from "../public/assets/patterns/left-upward-arrow.svg";
 import whiteCircles from "../public/assets/patterns/white-circles.svg";
+import line from "../public/assets/patterns/line.svg";
 
-// home <infoBlock> images
+// for <InfoBlock>
 import locate from "../public/assets/icons/locate.svg";
 import scooter from "../public/assets/icons/scooter.svg";
 import ride from "../public/assets/icons/ride.svg";
 
-// home <imageBlock> images
+// for <ImageBlock>
 import telemetry from "../public/assets/images/telemetry.jpg";
 import nearYou from "../public/assets/images/near-you.jpg";
 import payments from "../public/assets/images/payments.jpg";
-import { Footer } from "@/components/Footer";
-
-// "../public/assets/images/home-hero-mobile.jpg";
-
-// todo
-// import lighter space mono font
 
 export default function Home() {
   return (
@@ -49,8 +47,6 @@ export default function Home() {
         {/* keeping this as an example */}
         {/* <main className={styles.main}> */}
         <main className="bg-white flex flex-col items-center">
-          {/* <img src={"/assets/images/home-hero-mobile.jpg"} alt="" /> */}
-
           <div className="relative max-w-fit overflow-hidden">
             <Image src={mobileHero} alt="" className="md:hidden" />
             <Image
@@ -60,31 +56,39 @@ export default function Home() {
             />
             <Image src={desktopHero} alt="" className="hidden lg:inline" />
 
-            <div className="absolute top-0 w-full h-full flex flex-col gap-8 items-center justify-center text-white">
-              <h1 className="font-space-mono text-4xl text-center">
-                Scooter <br /> sharing made <br /> simple
-              </h1>
-              <p className="w-[260px] text-center md:text-lg md:w-[700px]">
-                Scoot takes the hassle out of urban mobility. Our bikes are
-                placed in convenient locations in each of our cities. Use our
-                app to locate the nearest bike, unlock it with a tap, and you’re
-                away!
-              </p>
-              <Button text="Get Scootin" />
+            <div className="HERO-SECTION absolute top-0 w-full h-full flex flex-col pb-20 gap-8 items-center justify-center text-white">
+              <div className="flex flex-col gap-8 items-center absolute xl:items-start xl:left-60">
+                <h1 className="font-space-mono text-4xl text-center xl:self-start xl:text-start xl:-ml-14">
+                  Scooter <br className="xl:hidden" /> sharing
+                  <br className="hidden xl:inline" /> made
+                  <br className="xl:hidden" /> simple
+                </h1>
+                <p className="w-[260px] text-center md:text-lg md:w-[700px] xl:text-start xl:w-[550px] ">
+                  Scoot takes the hassle out of urban mobility. Our bikes are
+                  placed in convenient locations in each of our cities. Use our
+                  app to locate the nearest bike, unlock it with a tap, and
+                  you’re away!
+                </p>
+                <Button text="Get Scootin" />
+              </div>
+              <Image
+                src={line}
+                alt=""
+                className="hidden xl:inline absolute left-0"
+              />
               <Image
                 src={rightArrow}
                 alt=""
-                className="-translate-x-56 -mt-12 md:translate-x-100"
+                className="-translate-x-56 absolute bottom-5 left-20 xl:left-[80%] xl:bottom-[33%]"
               />
               <Image
                 src={whiteCircles}
                 alt=""
-                className="hidden md:inline absolute bottom-24 -right-8"
+                className="hidden md:inline absolute bottom-8 -right-8"
               />
             </div>
           </div>
-
-          <section className="mt-5">
+          <section className="mt-5  xl:flex xl:flex-row ">
             <InfoBlock
               imgSrc={locate}
               title="Locate with app"
@@ -135,8 +139,8 @@ export default function Home() {
               arrowDirection="left"
             />
           </section>
-          <Footer />
         </main>
+        <Footer />
       </Container>
     </>
   );
