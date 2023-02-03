@@ -1,10 +1,11 @@
-import Image from "next/image";
-
 // components
 import { Container } from "@/components/Container";
 import { Nav } from "@/components/Nav";
+import { PageTitleHero } from "@/components/PageTitleHero";
 import { ImageBlock } from "@/components/ImageBlock";
+import { PositionsCard } from "@/components/PositionsCard";
 import { NumberedImage } from "@/components/NumberedImage";
+import { Footer } from "@/components/Footer";
 
 // images
 import bgMobile from "../public/assets/images/careers-location-hero-mobile.jpg";
@@ -14,16 +15,13 @@ import bgDesktop from "../public/assets/images/careers-location-hero-desktop.jpg
 // for <ImageBlock>
 import joinUs from "../public/assets/images/join-us.jpg";
 
-//  for <NumberedImage>
+// for <NumberedImage>
 import ourTech from "../public/assets/images/our-tech.jpg";
 import ourIntegrity from "../public/assets/images/our-integrity.jpg";
 import ourCommunity from "../public/assets/images/our-community.jpg";
 
 //arrows
 import leftDownward from "../public/assets/patterns/left-downward-arrow.svg";
-import { PositionsCard } from "@/components/PositionsCard";
-import { Footer } from "@/components/Footer";
-import { PageTitleHero } from "@/components/PageTitleHero";
 
 export default function Careers() {
   return (
@@ -37,16 +35,7 @@ export default function Careers() {
         desktopSrc={bgDesktop}
       />
 
-      {/* <div className="relative flex items-center justify-center ">
-        <Image src={bgMobile} alt="" className="md:hidden" />
-
-        <Image src={bgMobile} alt="" className="md:hidden" />
-        <Image src={bgTablet} alt="" className="hidden md:inline-block" />
-        <Image src={bgDesktop} alt="" className="hidden" />
-        <h1 className="absolute text-white text-3xl">Careers</h1>
-      </div> */}
-
-      <section>
+      <section className="max-w-fit mx-auto">
         <ImageBlock
           imgSrc={joinUs}
           title="Care to join our mission?"
@@ -62,29 +51,31 @@ export default function Careers() {
         <h2 className="text-dark-navy text-3xl mt-20 md:text-4xl">
           Why join us?
         </h2>
-        <NumberedImage
-          imgSrc={ourTech}
-          imgNumber="01"
-          title="Our tech"
-          description="We’re using cutting edge technology to drive accessible urban transportation forward. 
+        <div className="flex flex-col items-center gap-20 xl:flex-row">
+          <NumberedImage
+            imgSrc={ourTech}
+            imgNumber="01"
+            title="Our tech"
+            description="We’re using cutting edge technology to drive accessible urban transportation forward. 
             Our fully electric scooters are a joy to ride!"
-        ></NumberedImage>
+          ></NumberedImage>
 
-        <NumberedImage
-          imgSrc={ourIntegrity}
-          imgNumber="02"
-          title="Our integrity"
-          description="We are fully committed to deliver a great yet safe, sustainable micro-mobility experience 
+          <NumberedImage
+            imgSrc={ourIntegrity}
+            imgNumber="02"
+            title="Our integrity"
+            description="We are fully committed to deliver a great yet safe, sustainable micro-mobility experience 
             in every city we serve."
-        ></NumberedImage>
+          ></NumberedImage>
 
-        <NumberedImage
-          imgSrc={ourCommunity}
-          imgNumber="03"
-          title="Our community"
-          description="We support every community we serve. All workers are paid a living wage based on their 
+          <NumberedImage
+            imgSrc={ourCommunity}
+            imgNumber="03"
+            title="Our community"
+            description="We support every community we serve. All workers are paid a living wage based on their 
             location and are Scoot employees."
-        ></NumberedImage>
+          ></NumberedImage>
+        </div>
       </section>
 
       <ul className="flex flex-col items-center flex-wrap gap-4 my-20">
