@@ -6,7 +6,6 @@ import { Nav } from "@/components/Nav";
 import { PageTitleHero } from "@/components/PageTitleHero";
 import { LocationCard } from "@/components/LocationCard";
 import { ImageBlock } from "@/components/ImageBlock";
-import { Button } from "@/components/Button";
 import { Footer } from "@/components/Footer";
 
 import bgMobile from "../public/assets/images/about-hero-mobile.jpg";
@@ -44,19 +43,19 @@ export default function Location() {
         </li>
       </ul>
 
-      <ImageBlock
+      {/* <ImageBlock
         title="Your City Not Listed?"
         description="If you’d like to see Scoot in your hometown, be sure to let us know. We track 
   requests and plan launches based on demand. Feel free to message us by clicking 
   the link or messaging us on social."
-      />
+      /> */}
 
       {/* possibly use for desktop  */}
-      {/* <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:p-4">
-        <h3 className="font-space-mono text-2xl text-center text-dark-navy md:text-lg">
+      <div className="flex flex-col items-center justify-center gap-8 p-4 xl:flex-row xl:gap-14">
+        <h3 className="font-space-mono text-2xl text-center text-dark-navy xl:text-4xl xl:w-[300px]">
           <p>Your City Not Listed?</p>
         </h3>
-        <p className="text-dim-grey text-center max-w-xl md:text-xs md:text-start md:w-[600px]">
+        <p className="text-dim-grey text-center max-w-xl  xl:text-start xl:w-[600px]">
           If you’d like to see Scoot in your hometown, be sure to let us know.
           We track requests and plan launches based on demand. Feel free to
           message us by clicking the link or messaging us on social.
@@ -64,7 +63,7 @@ export default function Location() {
         <button className="font-space-mono bg-ylw px-10 py-2 text-white ">
           Message Us
         </button>
-      </div> */}
+      </div>
 
       <Footer />
     </Container>
