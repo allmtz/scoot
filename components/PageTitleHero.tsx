@@ -16,11 +16,15 @@ export const PageTitleHero = ({
   desktopSrc,
 }: IPageTitleHero) => {
   return (
-    <div className="relative flex items-center justify-center overflow-hidden">
+    <div className="relative flex items-center justify-center mx-auto max-w-fit overflow-hidden">
       <Image src={mobileSrc} alt="" className="md:hidden" />
-      <Image src={tabletSrc} alt="" className="hidden md:inline-block" />
-      <Image src={desktopSrc} alt="" className="hidden" />
-      <h1 className="absolute text-white text-3xl md:text-5xl md:left-20">
+      <Image
+        src={tabletSrc}
+        alt=""
+        className="hidden md:inline-block xl:hidden"
+      />
+      <Image src={desktopSrc} alt="" className="hidden xl:inline" />
+      <h1 className="absolute text-white text-3xl md:text-5xl md:left-20 xl:left-40">
         {pageName}
       </h1>
       <Image
