@@ -1,12 +1,15 @@
 import Image, { StaticImageData } from "next/image";
-import { Button } from "./Button";
+import React from "react";
 
+// typing the `children` prop
+// https://www.carlrippon.com/react-children-with-typescript/
 interface IImageBlock {
   imgSrc?: StaticImageData;
   title: string;
   description: string;
   arrowSrc?: string;
   arrowDirection?: string;
+  children?: React.ReactNode;
 }
 
 export const ImageBlock = ({
@@ -15,6 +18,7 @@ export const ImageBlock = ({
   description,
   arrowSrc,
   arrowDirection,
+  children,
 }: IImageBlock) => {
   return (
     <div className="relative flex flex-col gap-4 items-center p-4 mt-3 xl:flex-row xl:gap-40 xl:mt-20">
@@ -32,7 +36,7 @@ export const ImageBlock = ({
           {title}
         </h3>
         <p className="text-dim-grey text-center max-w-xl">{description}</p>
-        <Button text="Learn More" />
+        {children}
       </div>
     </div>
   );

@@ -119,7 +119,9 @@ export default function Home() {
               and you’re off! Always lock bikes away from walkways and accessibility ramps."
               arrowSrc={leftDownward}
               arrowDirection="left"
-            />
+            >
+              <Button text="Learn More" />
+            </ImageBlock>
             <ImageBlock
               imgSrc={nearYou}
               title="Coming to a city near you"
@@ -128,7 +130,9 @@ export default function Home() {
               scooters loose on 23 cities over the coming year."
               arrowSrc={rightArrow}
               arrowDirection="left"
-            />
+            >
+              <Button text="Learn More" />
+            </ImageBlock>
             <ImageBlock
               imgSrc={payments}
               title="Zero hassle payments"
@@ -137,7 +141,9 @@ export default function Home() {
               You can defer payment for up to a month."
               arrowSrc={leftDownward}
               arrowDirection="left"
-            />
+            >
+              <Button text="Learn More" />
+            </ImageBlock>
           </section>
         </main>
         <Footer />

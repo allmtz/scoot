@@ -1,5 +1,6 @@
 // components
 import { Container } from "@/components/Container";
+import { Button } from "@/components/Button";
 import { Nav } from "@/components/Nav";
 import { PageTitleHero } from "@/components/PageTitleHero";
 import { ImageBlock } from "@/components/ImageBlock";
@@ -44,7 +45,9 @@ export default function Careers() {
           living we want to hear from you!"
           arrowSrc={leftDownward}
           arrowDirection=""
-        />
+        >
+          <Button text="Say Hello" />
+        </ImageBlock>
       </section>
 
       <section className="flex flex-col items-center gap-20">
