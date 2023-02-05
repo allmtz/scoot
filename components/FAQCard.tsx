@@ -5,7 +5,7 @@ interface IFAQCard {
 
 export const FAQCard = ({ question, answer }: IFAQCard) => {
   return (
-    <div className="bg-snow p-4">
+    <div className="bg-snow p-4 hover:bg-light-ylw">
       <header className="flex items-center justify-between">
         <h3 className=" text-xl">{question}</h3>
         <svg

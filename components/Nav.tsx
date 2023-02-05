@@ -22,14 +22,14 @@ export const Nav = ({
           <Image
             src={close}
             alt={"close navigation menu"}
-            className="cursor-pointer md:hidden"
+            className="cursor-pointer w-[20px] md:hidden"
             onClick={() => setNavIsOpen(false)}
           />
         ) : (
           <Image
             src={hamburger}
             alt={"open navigation menu"}
-            className="cursor-pointer md:hidden"
+            className="cursor-pointer w-[20px] md:hidden"
             onClick={() => setNavIsOpen(true)}
           />
         )}

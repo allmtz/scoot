@@ -13,6 +13,7 @@ import bgTablet from "../public/assets/images/about-hero-tablet.jpg";
 import bgDesktop from "../public/assets/images/about-hero-desktop.jpg";
 
 import worldMapMobile from "../public/assets/images/world-map-mobile.png";
+import { Button } from "@/components/Button";
 
 export default function Location() {
   return (
@@ -42,15 +43,6 @@ export default function Location() {
           <LocationCard location="Yokohama" />
         </li>
       </ul>
-
-      {/* <ImageBlock
-        title="Your City Not Listed?"
-        description="If you’d like to see Scoot in your hometown, be sure to let us know. We track 
-  requests and plan launches based on demand. Feel free to message us by clicking 
-  the link or messaging us on social."
-      /> */}
-
-      {/* possibly use for desktop  */}
       <div className="flex flex-col items-center justify-center gap-8 p-4 xl:flex-row xl:gap-14">
         <h3 className="font-space-mono text-2xl text-center text-dark-navy xl:text-4xl xl:w-[300px]">
           <p>Your City Not Listed?</p>
@@ -60,11 +52,8 @@ export default function Location() {
           We track requests and plan launches based on demand. Feel free to
           message us by clicking the link or messaging us on social.
         </p>
-        <button className="font-space-mono bg-ylw px-10 py-2 text-white ">
-          Message Us
-        </button>
+        <Button text="Message Us" />
       </div>
-
       <Footer />
     </Container>
   );
