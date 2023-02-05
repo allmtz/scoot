@@ -14,12 +14,7 @@ export const FAQCard = ({ question, answer }: IFAQCard) => {
           height="12"
           className="w-10"
         >
-          <path
-            fill="none"
-            stroke="#FCB72B"
-            stroke-width="3"
-            d="M1 1l8 8 8-8"
-          />
+          <path fill="none" stroke="#FCB72B" strokeWidth="3" d="M1 1l8 8 8-8" />
         </svg>
       </header>
 
