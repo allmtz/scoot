@@ -40,13 +40,19 @@ export const Nav = ({
         </Link>
         <ul className="hidden md:flex md:gap-8 lg:gap-12">
           <li>
-            <Link href={"/about"}>About</Link>
+            <Link href={"/about"} className="hover:text-dim-grey">
+              About
+            </Link>
           </li>
           <li>
-            <Link href={"/location"}>Locations</Link>
+            <Link href={"/location"} className="hover:text-dim-grey">
+              Locations
+            </Link>
           </li>
           <li>
-            <Link href={"/careers"}>Careers</Link>
+            <Link href={"/careers"} className="hover:text-dim-grey">
+              Careers
+            </Link>
           </li>
         </ul>
         <div className="hidden md:inline">

@@ -29,13 +29,19 @@ export const Footer = () => {
         <p className="text-2xl mt-4 md:mt-0">scoot</p>
         <ul className="text-center leading-10 md:flex md:gap-8 text-dim-grey">
           <li>
-            <Link href="/about">About </Link>
+            <Link href="/about" className="hover:text-ylw">
+              About{" "}
+            </Link>
           </li>
           <li>
-            <Link href="/location">Location </Link>
+            <Link href="/location" className="hover:text-ylw">
+              Location{" "}
+            </Link>
           </li>
           <li>
-            <Link href="/careers">Careers </Link>
+            <Link href="/careers" className="hover:text-ylw">
+              Careers{" "}
+            </Link>
           </li>
         </ul>
         <div className="flex gap-4 text-white pb-8 items-center justify-center md:pb-0">
