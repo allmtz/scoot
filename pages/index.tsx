@@ -3,7 +3,6 @@
 
 import Head from "next/head";
 import Image from "next/image";
-import { useState } from "react";
 
 //components
 import { Button } from "@/components/Button";
@@ -36,7 +35,6 @@ import nearYou from "../public/assets/images/near-you.jpg";
 import payments from "../public/assets/images/payments.jpg";
 
 export default function Home() {
-  const [navIsOpen, setNavIsOpen] = useState(false);
   return (
     <>
       <Head>
@@ -45,7 +43,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Container>
-        <Nav navIsOpen={navIsOpen} setNavIsOpen={setNavIsOpen} />
+        <Nav />
         {/* keeping this as an example */}
         {/* <main className={styles.main}> */}
         <main className="bg-white flex flex-col items-center">

@@ -1,20 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { Dispatch, SetStateAction } from "react";
+import { useState } from "react";
 
 import hamburger from "../public/assets/icons/hamburger.svg";
 import close from "../public/assets/icons/close.svg";
 import { MobileNav } from "./MobileNav";
 import { Button } from "./Button";
 
-export const Nav = ({
-  navIsOpen,
-  setNavIsOpen,
-}: {
-  navIsOpen: boolean;
-  setNavIsOpen: Dispatch<SetStateAction<boolean>>;
-}) => {
+export const Nav = () => {
+  const [navIsOpen, setNavIsOpen] = useState(false);
+
   return (
     <>
       <nav className="sticky top-0 z-50 max-w-[1440px] mx-auto font-space-mono flex items-center p-3 bg-white md:justify-between">
