@@ -19,14 +19,16 @@ export const Footer = () => {
         <h2 className="text-white text-3xl w-[300px] mx-auto xl:mx-0 xl:text-start">
           Sign up and Scoot off today
         </h2>
-        <div className="flex justify-center mt-5 gap-4">
+        <div className="flex justify-center mt-5 gap-4 xl:z-10">
           <StoreButton storeLogo={appleStore} />
           <StoreButton storeLogo={googlePlay} />
         </div>
         <Image src={semiCircles} alt="" className="mt-4 xl:absolute bottom-0" />
       </div>
       <div className="flex flex-col items-center gap-8 w-full text-white bg-slate-800 md:flex-row md:justify-around md:py-4">
-        <p className="text-2xl mt-4 md:mt-0">scoot</p>
+        <Link href="/" className="hover:text-ylw">
+          <p className="text-2xl mt-4 md:mt-0">scoot</p>
+        </Link>
         <ul className="text-center leading-10 md:flex md:gap-8 text-dim-grey">
           <li>
             <Link href="/about" className="hover:text-ylw">
@@ -45,9 +47,9 @@ export const Footer = () => {
           </li>
         </ul>
         <div className="flex gap-4 text-white pb-8 items-center justify-center md:pb-0">
-          <Image src={fbLogo} alt="Facebook" />
-          <Image src={twitterLogo} alt="Twitter" />
-          <Image src={igLogo} alt="Instagram" />
+          <Image src={fbLogo} alt="Facebook" className="cursor-pointer" />
+          <Image src={twitterLogo} alt="Twitter" className="cursor-pointer" />
+          <Image src={igLogo} alt="Instagram" className="cursor-pointer" />
         </div>
       </div>
     </footer>

@@ -7,7 +7,7 @@ interface IStoreButton {
 export const StoreButton = ({ storeLogo }: IStoreButton) => {
   return (
     <button>
-      <Image src={storeLogo} alt="" />
+      <Image src={storeLogo} alt="" className="cursor-pointer" />
     </button>
   );
 };
