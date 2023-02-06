@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 export const MobileNav = ({ navIsOpen }: { navIsOpen: boolean }) => {
   return (
     <>
@@ -9,26 +10,31 @@ export const MobileNav = ({ navIsOpen }: { navIsOpen: boolean }) => {
             : "hidden"
         }
       >
-        <ul
-          role="list"
-          className="absolute flex flex-col gap-10  bg-slate-700  left-0 z-20 h-full p-4 w-[200px] text-white"
-        >
-          <li>
-            <Link href={"/about"}>About</Link>
-          </li>
-          <li>
-            <Link href={"/location"}>Location</Link>
-          </li>
-          <li>
-            <Link href={"/careers"}>Careers</Link>
-          </li>
+        <div className="absolute flex flex-col bg-slate-700  left-0 z-20 h-full p-4 w-[220px] text-white">
+          <ul role="list" className="flex flex-col gap-10 mt-5">
+            <li>
+              <Link href={"/about"} className="hover:text-ylw">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link href={"/location"} className="hover:text-ylw">
+                Location
+              </Link>
+            </li>
+            <li>
+              <Link href={"/careers"} className="hover:text-ylw">
+                Careers
+              </Link>
+            </li>
 
-          <li className="absolute bottom-20 left-auto">
-            <button className="font-space-mono bg-ylw px-8 py-3">
-              Get Scootin
-            </button>
-          </li>
-        </ul>
+            <li className="self-center mt-20">
+              <button className="font-space-mono bg-ylw px-8 py-3 hover:text-ylw hover:bg-white">
+                Get Scootin
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
     </>
   );

@@ -69,7 +69,9 @@ export default function Home() {
                   app to locate the nearest bike, unlock it with a tap, and
                   you’re away!
                 </p>
-                <Button text="Get Scootin" />
+                <button className="font-space-mono bg-ylw px-8 py-3 hover:text-ylw hover:bg-white">
+                  Get Scootin
+                </button>
               </div>
               <Image
                 src={line}
