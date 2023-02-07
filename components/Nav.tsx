@@ -13,24 +13,24 @@ export const Nav = () => {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 max-w-[1440px] mx-auto font-space-mono flex items-center p-3 bg-white md:justify-between">
+      <nav className="sticky top-0 z-50 mx-auto flex max-w-[1440px] items-center bg-white p-3 font-space-mono md:justify-between">
         {navIsOpen ? (
           <Image
             src={close}
             alt={"close navigation menu"}
-            className="cursor-pointer w-[20px] md:hidden"
+            className="w-[20px] cursor-pointer md:hidden"
             onClick={() => setNavIsOpen(false)}
           />
         ) : (
           <Image
             src={hamburger}
             alt={"open navigation menu"}
-            className="cursor-pointer w-[20px] md:hidden"
+            className="w-[20px] cursor-pointer md:hidden"
             onClick={() => setNavIsOpen(true)}
           />
         )}
         <Link href={"/"} className="m-auto md:m-0">
-          <h2 className="font-bold text-3xl leading-none text-dark-navy">
+          <h2 className="text-3xl font-bold leading-none text-dark-navy">
             scoot
           </h2>
         </Link>

@@ -22,7 +22,7 @@ export const FAQCard = ({ question, answer }: IFAQCard) => {
       className="FAQ-CARD bg-snow p-4 hover:bg-light-ylw sm:w-[500px]"
     >
       <header className="flex items-center justify-between">
-        <h3 className=" text-xl">{question}</h3>
+        <h3 className="text-xl">{question}</h3>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="18"

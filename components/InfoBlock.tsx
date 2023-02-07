@@ -11,21 +11,21 @@ interface IInfoBlock {
 
 export const InfoBlock = ({ imgSrc, title, description, alt }: IInfoBlock) => {
   return (
-    <div className="flex flex-col gap-4 items-center p-4 mt-3 md:flex-row md:gap-20 relative xl:flex-col">
+    <div className="relative mt-3 flex flex-col items-center gap-4 p-4 md:flex-row md:gap-20 xl:flex-col">
       <Image src={imgSrc} alt={""} className="z-10" />
       <Image
         src={line}
         alt={""}
-        className="hidden md:inline absolute -left-10 rotate-90 xl:rotate-0 xl:left-0 xl:top-14  "
+        className="absolute -left-10 hidden rotate-90 md:inline xl:left-0 xl:top-14 xl:rotate-0  "
       />
       <Image
         src={line}
         alt={""}
-        className="FOR-DESKTOP hidden xl:inline absolute rotate-0 -right-1 top-14  "
+        className="FOR-DESKTOP absolute -right-1 top-14 hidden rotate-0 xl:inline  "
       />
-      <div className="FOR-TABLET flex flex-col items-center justify gap-4 md:items-start">
+      <div className="FOR-TABLET justify flex flex-col items-center gap-4 md:items-start">
         <h3 className="font-space-mono text-2xl text-dark-navy">{title}</h3>
-        <p className="text-dim-grey text-center md:text-start md:w-[400px]">
+        <p className="text-center text-dim-grey md:w-[400px] md:text-start">
           {description}
         </p>
       </div>

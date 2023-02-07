@@ -46,47 +46,47 @@ export default function Home() {
         <Nav />
         {/* keeping this as an example */}
         {/* <main className={styles.main}> */}
-        <main className="bg-white flex flex-col items-center">
+        <main className="flex flex-col items-center bg-white">
           <div className="relative max-w-fit overflow-hidden">
             <Image src={mobileHero} alt="" className="md:hidden" />
             <Image
               src={tabletHero}
               alt=""
-              className="hidden lg:hidden md:inline"
+              className="hidden md:inline lg:hidden"
             />
             <Image src={desktopHero} alt="" className="hidden lg:inline" />
 
-            <div className="HERO-SECTION absolute top-0 w-full h-full flex flex-col pb-20 gap-8 items-center justify-center text-white">
-              <div className="flex flex-col gap-8 items-center absolute xl:items-start xl:left-60">
-                <h1 className="font-space-mono text-4xl text-center xl:self-start xl:text-start xl:-ml-14">
+            <div className="HERO-SECTION absolute top-0 flex h-full w-full flex-col items-center justify-center gap-8 pb-20 text-white">
+              <div className="absolute flex flex-col items-center gap-8 xl:left-60 xl:items-start">
+                <h1 className="text-center font-space-mono text-4xl xl:-ml-14 xl:self-start xl:text-start">
                   Scooter <br className="xl:hidden" /> sharing
                   <br className="hidden xl:inline" /> made
                   <br className="xl:hidden" /> simple
                 </h1>
-                <p className="w-[260px] text-center md:text-lg md:w-[700px] xl:text-start xl:w-[550px] ">
+                <p className="w-[260px] text-center md:w-[700px] md:text-lg xl:w-[550px] xl:text-start ">
                   Scoot takes the hassle out of urban mobility. Our bikes are
                   placed in convenient locations in each of our cities. Use our
                   app to locate the nearest bike, unlock it with a tap, and
                   you’re away!
                 </p>
-                <button className="font-space-mono bg-ylw px-8 py-3 hover:text-ylw hover:bg-white">
+                <button className="bg-ylw px-8 py-3 font-space-mono hover:bg-white hover:text-ylw">
                   Get Scootin
                 </button>
               </div>
               <Image
                 src={line}
                 alt=""
-                className="hidden xl:inline absolute left-0"
+                className="absolute left-0 hidden xl:inline"
               />
               <Image
                 src={rightArrow}
                 alt=""
-                className="-translate-x-56 absolute bottom-5 left-20 xl:left-[80%] xl:bottom-[33%]"
+                className="absolute bottom-5 left-20 -translate-x-56 xl:left-[80%] xl:bottom-[33%]"
               />
               <Image
                 src={whiteCircles}
                 alt=""
-                className="hidden md:inline absolute bottom-8 -right-8"
+                className="absolute bottom-8 -right-8 hidden md:inline"
               />
             </div>
           </div>

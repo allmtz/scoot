@@ -5,7 +5,6 @@ import { Container } from "@/components/Container";
 import { Nav } from "@/components/Nav";
 import { PageTitleHero } from "@/components/PageTitleHero";
 import { LocationCard } from "@/components/LocationCard";
-import { ImageBlock } from "@/components/ImageBlock";
 import { Footer } from "@/components/Footer";
 
 import bgMobile from "../public/assets/images/about-hero-mobile.jpg";
@@ -29,7 +28,7 @@ export default function Location() {
         <Image src={worldMapMobile} alt="" className="mt-10"></Image>
       </div>
 
-      <ul className="flex flex-col gap-4 items-center my-10">
+      <ul className="my-10 flex flex-col items-center gap-4">
         <li>
           <LocationCard location="New York" />
         </li>
@@ -44,10 +43,10 @@ export default function Location() {
         </li>
       </ul>
       <div className="flex flex-col items-center justify-center gap-8 p-4 xl:flex-row xl:gap-14">
-        <h3 className="font-space-mono text-2xl text-center text-dark-navy xl:text-4xl xl:w-[300px]">
+        <h3 className="text-center font-space-mono text-2xl text-dark-navy xl:w-[300px] xl:text-4xl">
           <p>Your City Not Listed?</p>
         </h3>
-        <p className="text-dim-grey text-center max-w-xl  xl:text-start xl:w-[600px]">
+        <p className="max-w-xl text-center text-dim-grey  xl:w-[600px] xl:text-start">
           If you’d like to see Scoot in your hometown, be sure to let us know.
           We track requests and plan launches based on demand. Feel free to
           message us by clicking the link or messaging us on social.

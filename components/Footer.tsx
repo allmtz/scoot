@@ -14,22 +14,22 @@ import semiCircles from "../public/assets/patterns/semi-circles.svg";
 
 export const Footer = () => {
   return (
-    <footer className="flex flex-col items-center font-space-mono mt-20 xl:w-full">
-      <div className="relative bg-dark-navy text-center text-2xl px-2 pt-12 xl:flex xl:justify-evenly xl:gap-96 xl:pb-20 xl:w-full ">
-        <h2 className="text-white text-3xl w-[300px] mx-auto xl:mx-0 xl:text-start">
+    <footer className="mt-20 flex flex-col items-center font-space-mono xl:w-full">
+      <div className="relative bg-dark-navy px-2 pt-12 text-center text-2xl xl:flex xl:w-full xl:justify-evenly xl:gap-96 xl:pb-20">
+        <h2 className="mx-auto w-[300px] text-3xl text-white xl:mx-0 xl:text-start">
           Sign up and Scoot off today
         </h2>
-        <div className="flex justify-center mt-5 gap-4 xl:z-10">
+        <div className="mt-5 flex justify-center gap-4 xl:z-10">
           <StoreButton storeLogo={appleStore} />
           <StoreButton storeLogo={googlePlay} />
         </div>
-        <Image src={semiCircles} alt="" className="mt-4 xl:absolute bottom-0" />
+        <Image src={semiCircles} alt="" className="bottom-0 mt-4 xl:absolute" />
       </div>
-      <div className="flex flex-col items-center gap-8 w-full text-white bg-slate-800 md:flex-row md:justify-around md:py-4">
+      <div className="flex w-full flex-col items-center gap-8 bg-slate-800 text-white md:flex-row md:justify-around md:py-4">
         <Link href="/" className="hover:text-ylw">
-          <p className="text-2xl mt-4 md:mt-0">scoot</p>
+          <p className="mt-4 text-2xl md:mt-0">scoot</p>
         </Link>
-        <ul className="text-center leading-10 md:flex md:gap-8 text-dim-grey">
+        <ul className="text-center leading-10 text-dim-grey md:flex md:gap-8">
           <li>
             <Link href="/about" className="hover:text-ylw">
               About{" "}
@@ -46,7 +46,7 @@ export const Footer = () => {
             </Link>
           </li>
         </ul>
-        <div className="flex gap-4 text-white pb-8 items-center justify-center md:pb-0">
+        <div className="flex items-center justify-center gap-4 pb-8 text-white md:pb-0">
           <Image src={fbLogo} alt="Facebook" className="cursor-pointer" />
           <Image src={twitterLogo} alt="Twitter" className="cursor-pointer" />
           <Image src={igLogo} alt="Instagram" className="cursor-pointer" />

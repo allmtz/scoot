@@ -58,7 +58,7 @@ export default function About() {
         </section>
 
         <section className="flex flex-col items-center gap-20">
-          <h2 className="text-dark-navy text-3xl mt-20">Our Values</h2>
+          <h2 className="mt-20 text-3xl text-dark-navy">Our Values</h2>
 
           <div className="flex flex-col items-center gap-20 xl:flex-row">
             <NumberedImage
@@ -87,14 +87,14 @@ export default function About() {
           </div>
         </section>
 
-        <section className="flex flex-col gap-4 p-2 items-center  text-dark-navy">
+        <section className="flex flex-col items-center gap-4 p-2  text-dark-navy">
           <h2 className="mx-auto mt-20 text-3xl md:text-5xl  ">FAQs</h2>
 
           <div className="  flex flex-col gap-4 xl:mt-20 xl:flex-row xl:gap-40">
             <h2 className="mx-auto mt-5 text-2xl xl:mt-0 xl:text-4xl">
               How it works
             </h2>
-            <div className="flex flex-col gap-4 max-w-[600px]">
+            <div className="flex max-w-[600px] flex-col gap-4">
               <FAQCard
                 question="How do I download the app?"
                 answer="To download the Scoot app, you can search “Scoot” in both the App and Google Play stores. 
@@ -117,11 +117,11 @@ export default function About() {
           </div>
         </section>
 
-        <section className="flex flex-col gap-4 mt-10 p-2 items-center xl:mx-auto xl:items-start xl:gap-40 xl:p-0 xl:max-w-fit xl:flex-row text-dark-navy">
+        <section className="mt-10 flex flex-col items-center gap-4 p-2 text-dark-navy xl:mx-auto xl:max-w-fit xl:flex-row xl:items-start xl:gap-40 xl:p-0">
           <h2 className="mx-auto mt-20 text-2xl xl:mt-0 xl:text-4xl">
             Safe Driving
           </h2>
-          <div className="flex flex-col gap-4 max-w-[600px]">
+          <div className="flex max-w-[600px] flex-col gap-4">
             <FAQCard
               question="Should I wear a helmet?"
               answer="Yes, please do! All cities have different laws. But we strongly strongly strongly recommend 

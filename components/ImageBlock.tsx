@@ -21,7 +21,7 @@ export const ImageBlock = ({
   children,
 }: IImageBlock) => {
   return (
-    <div className="relative flex flex-col gap-4 items-center p-4 mt-3 xl:flex-row xl:gap-40 xl:mt-20">
+    <div className="relative mt-3 flex flex-col items-center gap-4 p-4 xl:mt-20 xl:flex-row xl:gap-40">
       {imgSrc && arrowSrc && (
         <>
           <div className="relative">
@@ -31,11 +31,11 @@ export const ImageBlock = ({
         </>
       )}
 
-      <div className="flex flex-col gap-4 items-center ">
-        <h3 className="font-space-mono text-2xl text-center text-dark-navy md:text-4xl xl:mt-8">
+      <div className="flex flex-col items-center gap-4 ">
+        <h3 className="text-center font-space-mono text-2xl text-dark-navy md:text-4xl xl:mt-8">
           {title}
         </h3>
-        <p className="text-dim-grey text-center max-w-xl">{description}</p>
+        <p className="max-w-xl text-center text-dim-grey">{description}</p>
         {children}
       </div>
     </div>

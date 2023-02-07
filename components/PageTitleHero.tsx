@@ -16,7 +16,7 @@ export const PageTitleHero = ({
   desktopSrc,
 }: IPageTitleHero) => {
   return (
-    <div className="relative flex items-center justify-center mx-auto max-w-fit overflow-hidden">
+    <div className="relative mx-auto flex max-w-fit items-center justify-center overflow-hidden">
       <Image src={mobileSrc} alt="" className="md:hidden" />
       <Image
         src={tabletSrc}
@@ -24,13 +24,13 @@ export const PageTitleHero = ({
         className="hidden md:inline-block xl:hidden"
       />
       <Image src={desktopSrc} alt="" className="hidden xl:inline" />
-      <h1 className="absolute text-white text-3xl md:text-5xl md:left-20 xl:left-40">
+      <h1 className="absolute text-3xl text-white md:left-20 md:text-5xl xl:left-40">
         {pageName}
       </h1>
       <Image
         src={whiteCircles}
         alt=""
-        className="hidden md:inline absolute -right-8"
+        className="absolute -right-8 hidden md:inline"
       />
     </div>
   );

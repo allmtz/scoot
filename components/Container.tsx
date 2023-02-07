@@ -1,6 +1,6 @@
 export const Container = ({ ...props }) => {
   return (
-    <div className="font-space-mono max-w-[2560px] mx-auto">
+    <div className="mx-auto max-w-[2560px] font-space-mono">
       {props.children}
     </div>
   );

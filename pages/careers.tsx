@@ -36,7 +36,7 @@ export default function Careers() {
         desktopSrc={bgDesktop}
       />
 
-      <section className="max-w-fit mx-auto">
+      <section className="mx-auto max-w-fit">
         <ImageBlock
           imgSrc={joinUs}
           title="Care to join our mission?"
@@ -51,7 +51,7 @@ export default function Careers() {
       </section>
 
       <section className="flex flex-col items-center gap-20">
-        <h2 className="text-dark-navy text-3xl mt-20 md:text-4xl">
+        <h2 className="mt-20 text-3xl text-dark-navy md:text-4xl">
           Why join us?
         </h2>
         <div className="flex flex-col items-center gap-20 xl:flex-row">
@@ -81,7 +81,7 @@ export default function Careers() {
         </div>
       </section>
 
-      <ul className="flex flex-col items-center flex-wrap gap-4 my-20">
+      <ul className="my-20 flex flex-col flex-wrap items-center gap-4">
         <li>
           <PositionsCard
             positionTitle="General Manager"

@@ -16,11 +16,11 @@ export const NumberedImage = ({
   return (
     <div className="flex flex-col items-center">
       <Image src={imgSrc} alt="" className="rounded-full"></Image>
-      <div className="flex items-center justify-center -mt-6 rounded-full bg-ylw h-16 w-16 ">
+      <div className="-mt-6 flex h-16 w-16 items-center justify-center rounded-full bg-ylw">
         <p className="text-dark-navy">{imgNumber}</p>
       </div>
-      <p className="text-dark-navy text-2xl mt-4">{title}</p>
-      <p className="text-center text-dim-grey mt-8 max-w-xl">{description}</p>
+      <p className="mt-4 text-2xl text-dark-navy">{title}</p>
+      <p className="mt-8 max-w-xl text-center text-dim-grey">{description}</p>
     </div>
   );
 };
