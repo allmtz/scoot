@@ -2,10 +2,25 @@ interface IFAQCard {
   question: string;
   answer: string;
 }
+function toggleCard(e: React.SyntheticEvent<HTMLDivElement>) {
+  const parentFAQCard = (e.target as Element).closest(".FAQ-CARD");
+  const FAQAnswer = parentFAQCard?.querySelector("p");
+
+  if (FAQAnswer) {
+    if (FAQAnswer.style.display != "none") {
+      FAQAnswer.style.display = "none";
+    } else {
+      FAQAnswer.style.display = "block";
+    }
+  }
+}
 
 export const FAQCard = ({ question, answer }: IFAQCard) => {
   return (
-    <div className="bg-snow p-4 hover:bg-light-ylw">
+    <div
+      onClick={toggleCard}
+      className="FAQ-CARD bg-snow p-4 hover:bg-light-ylw sm:w-[500px]"
+    >
       <header className="flex items-center justify-between">
         <h3 className=" text-xl">{question}</h3>
         <svg
@@ -18,7 +33,7 @@ export const FAQCard = ({ question, answer }: IFAQCard) => {
         </svg>
       </header>
 
-      <p className="mt-4 font-lexend-deca">{answer}</p>
+      <p className="FAQ-ANSWER mt-4 font-lexend-deca">{answer}</p>
     </div>
   );
 };

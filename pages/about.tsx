@@ -117,7 +117,7 @@ export default function About() {
           </div>
         </section>
 
-        <section className="flex flex-col gap-4 p-2 items-center xl:mx-auto xl:items-start xl:gap-40 xl:p-0 xl:max-w-fit xl:flex-row text-dark-navy">
+        <section className="flex flex-col gap-4 mt-10 p-2 items-center xl:mx-auto xl:items-start xl:gap-40 xl:p-0 xl:max-w-fit xl:flex-row text-dark-navy">
           <h2 className="mx-auto mt-20 text-2xl xl:mt-0 xl:text-4xl">
             Safe Driving
           </h2>
